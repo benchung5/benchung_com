@@ -1,7 +1,5 @@
-
-ben notes:
-this repo:
- https://github.com/barryclark/jekyll-now
+from:
+https://github.com/barryclark/jekyll-now
 
 tutorial:
 https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/
