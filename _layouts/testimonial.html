@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+
+{% include head.html %}
+
+<!--if contact page, load google map, and load body class on all pages-->
+
+<body class="post-template-default single single-post postid-2054 single-format-standard inheader-menu no-pageheader internal-page">
+  <div class="hide">
+    <p><a href="#content">Skip to Content</a></p>
+  </div>
+  <!--.none-->
+
+  {% include header.html %}
+
+  <div class="clear"></div>
+
+  <div class="loading-container">
+
+    <div id="main-wrapper">
+
+      <!-- begin body content-->
+      <div class="body-container">
+
+        <!--if masonry blog style-->
+        <!--if standard, 2 or 3 column blog style-->
+        <div class="row">
+
+          <!--  change column width if sidebar turned on-->
+          <article id="content" class="large-8 columns">
+            <div class="singlepost post-2054 post type-post status-publish format-standard has-post-thumbnail hentry category-three-js tag-html5 tag-loaders tag-three-js tag-animation has_thumb"
+              id="single-post-2054">
+              <div class="entry">
+                <h1 class="page-header single-header">{{ page.title }}</h1>
+                <div class="clear"></div>               
+                  <!--content ========================-->
+
+                  {{ content }}
+
+                  <!--end content ========================-->
+                  {% include disqus.html %}
+
+                  <div style="clear:both;"></div>
+
+                  <div class="lineafter-header-container">
+                    <h4 class="lineafter-heading">Share This</h4>
+                  </div>
+              </div>
+            </div>
+
+            <!-- next/prev posts -->
+            <div class="spacer-sml"></div>
+            <div class="leftnav single">
+              &laquo; <a href="" rel="prev"><!-- prev post title --></a>
+            </div>
+            <div class="rightnav single">
+              <a href="" rel="next"><!-- next post title --></a> 
+              &raquo; 
+            </div>
+
+          </article>
+
+          <!-- sidebar-->
+
+          {% include sidebar.html %}
+
+        </div>
+        <!--row-->
+
+        <div class="clear"></div>
+
+      </div>
+      <!-- end begin body content-->
+
+      {% include footer.html %}
+
+    <!--#main container-->
+
+  </div>
+  <!--#loading container-->
+
+{% include footer-scripts.html %}
+
+{% include analytics.html %}
+
+</body>
+
+</html>

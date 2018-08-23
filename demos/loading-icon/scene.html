@@ -1,0 +1,51 @@
+<html>
+   <head>
+      <title>One Pixel Engine</title>
+      <link rel="stylesheet" type="text/css" media="all" href="css/normalize.css" />
+      <link rel="stylesheet" type="text/css" media="all" href="css/foundation.css" />
+      <link rel="stylesheet" type="text/css" media="all" href="style.css" />
+      <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+   </head>
+   <body>
+
+       <div class = "loading-container">
+          <!-- <div class="row">
+                <div class="medium-3 columns ">
+                </div>
+                <div class="medium-9 columns ">
+                </div>
+           </div>  -->
+
+          <div id="container">                     
+              <div id="debug">
+                  <div id="mousepos"></div>
+                  <div id="loading"></div>
+                  <div id="anmimation">
+                    <a id="start" href="javascript:void(0)">play</a>
+                    <a id="stop" href="javascript:void(0)">stop</a>
+                  </div>
+              </div>
+          </div>
+       </div>
+
+
+      <!-- make sure this is just below the closing </body> tag -->
+      <!-- for some reason the latest three.js doesn't work, so we use the one from the example file-->
+      <script src="js/three.min.js"></script>
+      <script type="text/javascript" src="js/stats.min.js"></script>
+      <script type="text/javascript" src="js/Detector.js"></script>
+      <script src="js/loaders/ColladaLoader.js"></script>
+      <script src="js/shaders/FresnelShader.js"></script>
+      <script src="js/shaders/ReflectionShader.js"></script>
+      <script src="http://heartcode-canvasloader.googlecode.com/files/heartcode-canvasloader-min-0.9.1.js"></script>
+      
+      <!-- load onepix scripts-->
+      <script src="js/OnepixLoaders.js"></script>
+      
+      <!--make sure this is loaded last-->
+      <script src="scene.js"></script> 
+      
+
+      
+   </body>
+</html>    

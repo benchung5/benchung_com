@@ -1,0 +1,82 @@
+---
+layout: blog
+title: WordPress
+meta: The most recent news and developments related to planetary objects of the universe.
+permalink: /categories/wordpress/
+---
+
+{% for post in site.categories.wordpress %}
+
+  {% if post.thumbnail %}
+
+  <article class="posts-row">
+    <div class="row">
+      <div class="medium-4 columns">
+        <div class="featured-thumbnail-1col">
+          <a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark" title="{{ post.title }}">
+            <img width="250" height="250" src="{{site.baseurl}}/images/blog/{{ post.thumbnail }}"
+              class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="{{site.baseurl}}/images/blog/{{ post.thumbnail }} 250w, {{site.baseurl}}/images/blog/{{ post.thumbnail }} 150w, {{site.baseurl}}/images/blog/{{ post.thumbnail }} 50w"
+              sizes="(max-width: 250px) 100vw, 250px" /> </a>
+        </div>
+      </div>
+      <div class="medium-8 columns post-excerpt">
+        <h2 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a></h2>
+
+        <div class="meta">
+          <time datetime="{{ post.date | date: "%B %e, %Y" }}"><span class="meta-date">{{ post.date | date: "%B %e, %Y" }}</span></time><span class="meta-category"><span class="meta-separator">|</span>
+          <a href="{{site.baseurl}}/categories/{{post.category}}/">{{post.category_name}}</a>
+        </div>
+
+        <p>
+
+          {{ post.excerpt }}
+
+        </p>
+        <div class="excerpt-bottom-meta">
+          <a class="read-more" href="{{ site.baseurl }}{{ post.url }}" title="Permanent Link to {{ post.title }}">Continue Reading  &raquo;</a>
+
+          {% include social-share-blog.html %}
+
+          <div class="clear"></div>
+        </div>
+      </div>
+      <!--.postContent-->
+    </div>
+    <div class="row">
+      <div class="medium-12 columns">
+        <!--                        we must to it this way with the extra markup because of the columns padding-->
+        <div class="divider-posts"></div>
+      </div>
+    </div>
+  </article>
+
+  {% else %}
+    
+  <article class="row posts-row">
+    <div class="medium-12 columns">
+     <h2 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a></h2>
+
+      <div class="meta">
+        <time datetime="{{ post.date | date: "%B %e, %Y" }}"><span class="meta-date">{{ post.date | date: "%B %e, %Y" }}</span></time><span class="meta-category"><span class="meta-separator">|</span>
+        <a href="{{site.baseurl}}/categories/{{post.category}}/">{{post.category_name}}</a>
+      </div>
+
+      <p>
+
+      {{ post.excerpt }}
+
+      </p>
+      <div class="excerpt-bottom-meta">
+          <a class="read-more" href="{{ site.baseurl }}{{ post.url }}" title="Permanent Link to {{ post.title }}">Continue Reading  &raquo;</a>
+
+          {% include social-share-blog.html %}
+
+        <div class="clear"></div>
+      </div>
+      <div class="divider-posts"></div>
+    </div>
+  </article>
+
+  {% endif %}
+
+{% endfor %}

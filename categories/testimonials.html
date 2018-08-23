@@ -1,0 +1,22 @@
+---
+layout: testimonials
+title: Testimonials
+meta: What past clients have said.
+permalink: /categories/testimonials/
+---
+
+{% for post in site.categories.testimonials %}
+    
+  <article class="row posts-row">
+    <div class="medium-12 columns">
+     <h2 class="post-title">{{ post.title }}</h2>
+      <p>
+
+      {{ post.content }}
+
+      </p>
+      <div class="divider-posts"></div>
+    </div>
+  </article>
+
+{% endfor %}

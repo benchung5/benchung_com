@@ -1,0 +1,29 @@
+<html>
+   <head>
+      <title>Loading Animated models into Three.js (benchung.com)</title>
+      <style>canvas { width: 100%; height: 100% }</style>
+      <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+   </head>
+   <body>
+
+        <div id="anmimation" style="text-align: center; font-family: sans-serif;">
+            <h1>Loading Animated models into Three.js (benchung.com)</h1>
+            <br>
+            <a id="start" href="javascript:void(0)">play</a>
+            <a id="stop" href="javascript:void(0)">stop</a>
+        </div>
+      <div id="container"></div>
+
+      
+      <!-- make sure this is just below the closing </body> tag -->
+      <!-- for some reason the latest three.js doesn't work, so we use the one from the example file-->
+      <script src="js/three.min.js"></script>
+      <script src="js/controls/TrackballControls.js"></script>
+      <script type="text/javascript" src="js/Detector.js"></script>
+      <script src="js/loaders/ColladaLoader.js"></script>
+      <!--make sure this is last-->
+      <script src="js/scene.js"></script> 
+      <div id="container"></div>
+      
+   </body>
+</html>    

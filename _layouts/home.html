@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+
+{% include head.html %}
+
+<!--if contact page, load google map, and load body class on all pages-->
+
+<body class="home page-template page-template-template-home page-template-template-home-php page page-id-1731 inheader-menu standard-pageheader ">
+    <div class="hide">
+        <p><a href="#content">Skip to Content</a></p>
+    </div>
+    <!--.none-->
+
+    {% include header.html %}
+
+    <div class="clear"></div>
+
+    <div class="loading-container">
+
+        <div id="main-wrapper">
+            <!-- the wrapper for header, footer, and content area -->
+            <section class="full-width-img-home-wrapper">
+                <div class="full-width-img full-width-img-home" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="0" style="background-image: url({{site.baseurl}}/images/featured-bg.jpg); min-height:644px;">
+                    <div class="flex-caption">
+                        <div class="caption-container">
+                            <div class="text-container">
+                                <hgroup>
+                                    <h1 id="homepage-feature-title">Hello</h1>
+                                    <h2 id="homepage-subfeature-title">My name is Ben Chung</h2>
+                                </hgroup>
+                                <div id="homepage-subfeature-secondary">I'm a web developer and 3d artist. My main focus right now is enriching user experience by delivering the best of 3d to the web.</div>
+                            </div>
+                            <div class="featured-img-front">
+                                <img src="{{site.baseurl}}/images/thought-robot.png" />
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="featured-gradient"></div>
+                    <!-- gradient overlay  -->
+                </div>
+                <!--end full width image home-->
+            </section>
+
+            <!-- begin home body content-->
+            <section class="home-body-container">
+                <!-- content-->
+
+                {{ content }}
+
+                <!--#content-->
+
+                <div class="clear"></div>
+            </section>
+
+            <section class="above-footer-wrapper">
+                <!--    above footer widget area-->
+                <div id="onepix_catch_phrase-3" class="widget widget-onepix_catch_phrase">
+                    <div class="catch-phrase">
+                        <div class="row">
+                            <div class="medium-8 columns media-center-med">
+                                <div class="left catch-phrase-text">Interested in working together?</div>
+                            </div>
+                            <div class="medium-4 columns media-center-med">
+                                <a href="{{site.baseurl}}/contact/" class="btn shadow medium right" style="background-color:#121212;">Send me a Message</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <footer id="footer" class="padding-bottom">
+                <div class="row">
+                    <div class="medium-12 columns center media-center-med">
+                        <div class="copywright padding-columns">&copy; <a href="{{site.baseurl}}/" title="JavaScript Web Development">benchung.com&nbsp;2018</a>.</div>
+                    </div>
+                </div>
+                <!--.container-->
+            </footer>
+        </div>
+
+        <!--back to top (put this at the bottom of content area)-->
+        <div id="toTop">
+            <div id=toTop-icon-wrap>
+                <i class="fa fa-angle-up"></i>
+            </div>
+        </div>
+    </div>
+    <!--#main container-->
+
+    </div>
+    <!--#loading container-->
+
+{% include footer-scripts.html %}
+
+{% include analytics.html %}
+
+</body>
+</html>

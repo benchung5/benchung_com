@@ -1,0 +1,50 @@
+<head>
+    {% include analytics.html %}
+
+    <base href="http://benchung.com" />
+
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- redirect www to non www -->
+<!--     <meta http-equiv="refresh" content="0; url={{ site.url }}{{ page.url | replace:'index.html',''}}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}"> -->
+    
+    <link rel="icon" href="{{site.baseurl}}/favicon.ico" type="image/x-icon" /><link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    {% include meta.html %}
+
+    <!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+    <!-- This site is optimized with the Yoast SEO plugin v5.0.1 - https://yoast.com/wordpress/plugins/seo/ -->
+    <meta name="description" content="Front end web application development using Javascript. Building web and mobile cloud apps using JavaScript REST APIs, React, Node.js, WordPress, etc."
+    />
+    <link rel="canonical" href="{{site.baseurl}}/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="3D Web Development - benchung.com" />
+    <meta property="og:description" content="3D web application development. Building 3D web apps for games, products and scientific visualization."
+    />
+    <meta property="og:url" content="{{site.baseurl}}/" />
+    <meta property="og:site_name" content="benchung.com" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="3D web application development. Building 3D web apps for games, products and scientific visualization."
+    />
+    <meta name="twitter:title" content="3D Web Development - benchung.com" />
+    <script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"http:\/\/benchung.com\/","name":"benchung.com","potentialAction":{"@type":"SearchAction","target":"http:\/\/benchung.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+    <meta name="google-site-verification" content="QjMX23Fljy_Yj7-GfTVg_KFChIdDYOk1NeKjGsFcZBs" />
+    <!-- / Yoast SEO plugin. -->
+
+    <link rel='dns-prefetch' href='//s0.wp.com' />
+    <link rel='dns-prefetch' href='//s.gravatar.com' />
+    <link rel='dns-prefetch' href='//s.w.org' />
+
+    <link rel='stylesheet' id='default-style-css' href='{{site.baseurl}}/style.css' type='text/css' media='all'/>
+
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic'
+        rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic'
+        rel='stylesheet' type='text/css'>
+</head>

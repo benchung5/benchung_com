@@ -1,0 +1,70 @@
+{
+	"metadata": {
+		"version": 4.3,
+		"type": "Object",
+		"generator": "ObjectExporter"
+	},
+	"geometries": [
+		{
+			"uuid": "16A5E71E-F025-43ED-855A-1F62743B0C37",
+			"type": "TorusGeometry",
+			"radius": 100,
+			"tube": 40,
+			"radialSegments": 8,
+			"tubularSegments": 6,
+			"arc": 6.283185307179586
+		}],
+	"materials": [
+		{
+			"uuid": "FAF4740D-A672-4084-9729-C7F6A7DFDE3F",
+			"type": "MeshPhongMaterial",
+			"color": 16777215,
+			"ambient": 16777215,
+			"emissive": 0,
+			"specular": 1118481,
+			"shininess": 30
+		}],
+	"object": {
+		"uuid": "292E9D18-2812-4DB9-AEDE-B66FA6DA12B9",
+		"type": "Scene",
+		"name": "Scene",
+		"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+		"children": [
+			{
+				"uuid": "9FCAADD1-82B2-43BD-A0A7-D32CE5ACD9E2",
+				"type": "Mesh",
+				"name": "Torus 1",
+				"geometry": "16A5E71E-F025-43ED-855A-1F62743B0C37",
+				"material": "FAF4740D-A672-4084-9729-C7F6A7DFDE3F",
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]
+			},
+			{
+				"uuid": "28AB5817-FB77-48FC-B083-197BD51CDE78",
+				"type": "PointLight",
+				"name": "PointLight 1",
+				"color": 16777215,
+				"intensity": 1,
+				"distance": 0,
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-197.80523681640625,0,197.1398162841797,1]
+			},
+			{
+				"uuid": "E7A965C1-DD01-48EF-A022-B8AF342C4E4F",
+				"type": "PerspectiveCamera",
+				"name": "PerspectiveCamera 1",
+				"fov": 50,
+				"aspect": 1,
+				"near": 1,
+				"far": 10000,
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,57.32932662963867,305.1258544921875,1]
+			},
+			{
+				"uuid": "16866191-CF98-41CD-9DFD-694B02019D40",
+				"type": "PointLight",
+				"name": "PointLight 2",
+				"color": 16777215,
+				"intensity": 1,
+				"distance": 0,
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,407.3302001953125,0,-297.6192626953125,1]
+			}]
+	}
+}

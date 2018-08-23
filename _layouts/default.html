@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+
+{% include head.html %}
+
+<!--if contact page, load google map, and load body class on all pages-->
+
+<body class="page-template-default page page-id-1821 logged-in admin-bar inheader-menu no-pageheader internal-page  customize-support ">
+  <div class="hide">
+    <p><a href="#content">Skip to Content</a></p>
+  </div>
+  <!--.none-->
+
+  {% include header.html %}
+
+  <div class="clear"></div>
+
+  <div class="loading-container">
+
+    <div id="main-wrapper">
+
+      <!-- begin body content-->
+      <div class="body-container">
+
+        {{ content }}
+
+      </div>
+      <!-- end begin body content-->
+
+      {% include footer.html %}
+      
+    </div>
+    <!--#main container-->
+
+  </div>
+  <!--#loading container-->
+
+{% include footer-scripts.html %}
+
+{% include analytics.html %}
+
+</body>
+
+</html>

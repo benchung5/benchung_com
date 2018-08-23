@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clearing Thumbnial Lists</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <style>
+            
+            html{
+                background: #f0f0f0;
+                color: #c6c6c6;
+                font-family: sans-serif;
+            }
+            
+            ul#my-list{
+                display: block;
+                padding: 0;
+                margin: 2px 0 0 2px ;
+            }
+            
+            ul#my-list > li {
+                list-style-type: none;
+                float: left;
+                margin-right: 15px;
+                width: 233px;
+                display: block;
+            }
+            
+            ul#my-list > li > img {
+                width: 100%;
+                display: block;
+            }
+            
+            /*clear left on every fourth item*/
+            ul#my-list > li:nth-of-type(3n+1){
+                clear:left;
+            }
+            
+            /*no padding on every third item*/
+            ul#my-list > li:nth-of-type(3n+3){
+                margin-right: 0
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <ul id="my-list">
+                <li><img src="images/545X545.jpg"/><p>Some Text</p></li>
+                <li><img src="images/545X545.jpg"/><p>Some Text</p></li>
+                <li><img src="images/545X545.jpg"/><p>Some Text</p></li>
+
+                <li><img src="images/545X545.jpg"/><p>Some Text</p></li>
+                <li><img src="images/545X545.jpg"/><p>Some Text + Nam quis nulla nec neque eleifend consectetur in nec nisi. Vestibulum luctus justo ut lacus semper vestibulum.</p></li>
+                <li><img src="images/545X545.jpg"/><p>Some Text</p></li>
+
+                <li><img src="images/545X545.jpg"/><p>Some Text</p></li>
+                <li><img src="images/545X545.jpg"/><p>Some Text</p></li>
+                <li><img src="images/545X545.jpg"/><p>Some Text</p></li>
+            </ul>
+        </div>
+    </body>
+</html>

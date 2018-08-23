@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+
+{% include head.html %}
+
+<!--if contact page, load google map, and load body class on all pages-->
+
+<body class="page-template page-template-template-blog page-template-template-blog-php page page-id-703 inheader-menu no-pageheader internal-page">
+  <div class="hide">
+    <p><a href="#content">Skip to Content</a></p>
+  </div>
+  <!--.none-->
+
+  {% include header.html %}
+
+  <div class="clear"></div>
+
+  <div class="loading-container">
+
+    <div id="main-wrapper">
+
+      <!-- begin body content-->
+      <div class="body-container">
+
+        <!--if masonry blog style-->
+        <!--if standard, 2 or 3 column blog style-->
+        <div class="row">
+
+          <!--  change column width if sidebar turned on-->
+          <div id="content" class="large-8 columns">
+
+
+            <div class="post entry blog-page-template-2 clearfix">
+            </div>
+            <!--    select the columns template-->
+            <div class="single-col-posts">
+
+              {{ content }}
+
+            </div>
+            <!--end single-col-posts-->
+            <div class="clear"></div>
+
+            <!-- Pagination links -->
+<!--             <div class="pagination">
+              {% if paginator.previous_page %}
+                <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+              {% else %}
+                <span class="previous">Previous</span>
+              {% endif %}
+              <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+              {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+              {% else %}
+                <span class="next ">Next</span>
+              {% endif %}
+            </div> -->
+
+            <div class="navigation clearfix">
+              <div class='wp-pagenavi'>
+                <span class='pages'>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+                {% for page in (1..paginator.total_pages) %}
+                  {% if page == paginator.page %}
+                    <span class='current'>{{ paginator.page }}</span>
+                  {% elsif page == 1 %}
+                    <a class="page larger" title="Page {{ page }}" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+                  {% else %}   
+                  <a class="page larger" title="Page {{ page }}" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+                  {% endif %}
+                {% endfor %}
+                {% if paginator.next_page %}
+                  <a class="nextpostslink" rel="next" href="{{ paginator.next_page_path }}">&raquo;</a>
+                {% endif %}
+              </div>
+            </div>
+
+          </div>
+          <!--#content-->
+
+          <!-- sidebar-->
+
+          {% include sidebar.html %}
+
+        </div>
+        <!--row-->
+
+        <div class="clear"></div>
+
+      </div>
+      <!-- end begin body content-->
+
+      {% include footer.html %}
+
+    </div>
+    <!--#main container-->
+
+  </div>
+  <!--#loading container-->
+
+  {% include footer-scripts.html %}
+
+  {% include analytics.html %}
+
+</body>
+
+</html>
